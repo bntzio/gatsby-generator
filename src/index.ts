@@ -17,53 +17,45 @@ class GatsbyGenerator extends Command {
   }
 
   async run() {
-    this.log('Select your starter ✨\n')
-    starters.forEach(starter => {
-      this.log(`* ${starter.name}`)
-    })
-
-    // this.log('\nDownloading Superstylin...')
-
     // types
-    // type QuestionType = [{ type: string, name: string, message: string }]
-    type StartersType = { name: string, description: string, url: string }
+    type StartersType = [{ name: string, description: string, url: string }]
 
-    const buildChoices = (starters: [StartersType]) => {
+    // grab starters and return them as choices for inquirer.js
+    const buildChoices = (starters: StartersType) => {
       let choices: [string] | any = [] // strictNullChecks is not working! 😡
-      starters.forEach((starter: StartersType) => {
+      starters.forEach(starter => {
         const choice = `${starter.name} - ${starter.description}`
         choices.push(choice)
       })
       return choices
     }
 
-    const choices = [
-      {
+    // select the starter to start the download
+    const selectStarter = (starters: StartersType) => {
+      const choices = [{
         type: 'list',
         name: 'selectedStarter',
         message: 'Choose your Gatsby starter ✨',
-        choices: () => buildChoices(starters)
-      }
-    ]
+        choices: () => buildChoices(starters) // build choices from starters 🔨
+      }]
 
-    // const questions: QuestionType = [
-    //   {
-    //     type: 'input',
-    //     name: 'name',
-    //     message: `What's your name?`
-    //   }
-    // ]
-
-    const mainPrompt = () => {
       return prompt(choices).then((answer: any) => {
-        const starter: string = answer.selectedStarter
-        this.log(`Your starter is ${starter}`)
+        const selectedStarter: string = answer.selectedStarter
+
+        starters.forEach(starter => {
+          const choiceOpt = `${starter.name} - ${starter.description}`
+          if (choiceOpt === selectedStarter) {
+            this.log(`Downloading ${starter.name}...`)
+            exec(`gatsby new my-awesome-starter ${starter.url}`)
+            this.log('\nYour Gatsby Starter was downloaded successfully ✨')
+            this.log('Happy Gatsbying! 😄')
+          }
+        })
       })
     }
-    mainPrompt()
 
-    // exec('gatsby new my-awesome-starter https://github.com/bntzio/gatsby-starter-superstylin')
-    // this.log('\nDone! ✨')
+    // run!! ✨
+    selectStarter(starters)
   }
 }
 
