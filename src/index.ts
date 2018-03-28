@@ -1,33 +1,24 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from '@oclif/command'
+
+import starters from './starters'
 
 class GatsbyGenerator extends Command {
-  static description = 'describe the command here'
+  static description = 'Generate Gatsby Starters in Seconds 🎰'
 
   static examples = [
-    `$ gatsby-generate hello world from ./src/gatsby-generator.ts!`,
+    `$ gatsby-generate hello world from ./src/gatsby-generator.ts!`
   ]
 
   static flags = {
-    // add --version flag to show CLI version
     version: flags.version({char: 'v'}),
-    // add --help flag to show CLI version
-    help: flags.help({char: 'h'}),
-
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    force: flags.boolean({char: 'f'}),
+    help: flags.help({char: 'h'})
   }
 
-  static args = [{name: 'file'}]
-
   async run() {
-    const {args, flags} = this.parse(GatsbyGenerator)
-
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from ${__filename}!`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    this.log('Select your starter ✨\n')
+    starters.forEach(starter => {
+      this.log(`* ${starter.name}`)
+    })
   }
 }
 
