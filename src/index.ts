@@ -34,7 +34,7 @@ class GatsbyGenerator extends Command {
     ]
 
     const mainPrompt = (questions: QuestionType) => {
-      return prompt(questions).then((answers: any) => {
+      return prompt(questions).then((answers: { name: string }) => {
         const name: string = answers.name
         this.log(`Your name is ${name}`)
       })
