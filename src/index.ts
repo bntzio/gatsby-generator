@@ -18,7 +18,7 @@ class GatsbyGenerator extends Command {
 
   async run() {
     // types
-    type StartersType = [{ name: string, description: string, url: string }]
+    type StartersType = { name: string, description: string, url: string }[]
 
     // grab starters and return them as choices for inquirer.js
     const buildChoices = (starters: StartersType) => {
