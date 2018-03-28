@@ -8,12 +8,12 @@ class GatsbyGenerator extends Command {
   static description = 'Generate Gatsby Starters in Seconds 🎰'
 
   static examples = [
-    `$ gatsby-generate hello world from ./src/gatsby-generator.ts!`
+    `$ gatsby-generate`
   ]
 
   static flags = {
-    version: flags.version({char: 'v'}),
-    help: flags.help({char: 'h'})
+    version: flags.version({ char: 'v' }),
+    help: flags.help({ char: 'h' })
   }
 
   async run() {
