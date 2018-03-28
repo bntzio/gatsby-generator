@@ -35,7 +35,7 @@ class GatsbyGenerator extends Command {
       const choices = [{
         type: 'list',
         name: 'selectedStarter',
-        message: 'Choose your Gatsby starter ✨',
+        message: 'Choose your Gatsby starter 🎰',
         choices: () => buildChoices(starters) // build choices from starters 🔨
       }]
 
