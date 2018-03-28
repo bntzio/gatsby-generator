@@ -24,22 +24,43 @@ class GatsbyGenerator extends Command {
 
     // this.log('\nDownloading Superstylin...')
 
-    type QuestionType = [{ type: string, name: string, message: string }]
-    const questions: QuestionType = [
+    // types
+    // type QuestionType = [{ type: string, name: string, message: string }]
+    type StartersType = { name: string, description: string, url: string }
+
+    const buildChoices = (starters: [StartersType]) => {
+      let choices: [string] | any = [] // strictNullChecks is not working! 😡
+      starters.forEach((starter: StartersType) => {
+        const choice = `${starter.name} - ${starter.description}`
+        choices.push(choice)
+      })
+      return choices
+    }
+
+    const choices = [
       {
-        type: 'input',
-        name: 'name',
-        message: `What's your name?`
+        type: 'list',
+        name: 'selectedStarter',
+        message: 'Choose your Gatsby starter ✨',
+        choices: () => buildChoices(starters)
       }
     ]
 
-    const mainPrompt = (questions: QuestionType) => {
-      return prompt(questions).then((answers: { name: string }) => {
-        const name: string = answers.name
-        this.log(`Your name is ${name}`)
+    // const questions: QuestionType = [
+    //   {
+    //     type: 'input',
+    //     name: 'name',
+    //     message: `What's your name?`
+    //   }
+    // ]
+
+    const mainPrompt = () => {
+      return prompt(choices).then((answer: any) => {
+        const starter: string = answer.selectedStarter
+        this.log(`Your starter is ${starter}`)
       })
     }
-    mainPrompt(questions)
+    mainPrompt()
 
     // exec('gatsby new my-awesome-starter https://github.com/bntzio/gatsby-starter-superstylin')
     // this.log('\nDone! ✨')
