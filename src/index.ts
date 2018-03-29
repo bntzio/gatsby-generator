@@ -1,9 +1,23 @@
+import * as request from 'request-promise'
 import { Command, flags } from '@oclif/command'
 import { exec } from 'shelljs'
 import { prompt } from 'inquirer'
 import { red, bold } from 'chalk'
 
-import starters from './starters'
+const url = 'https://raw.githubusercontent.com/bntzio/gatsby-generator/master/src/api/starters.json'
+
+const fetchStarters = async () => {
+  const opts: { url: string, method: string } = {
+    url,
+    method: 'get'
+  }
+  try {
+    const response: any = await request(opts)
+    return Promise.resolve(response)
+  } catch (error) {
+    return Promise.reject(error)
+  }
+}
 
 class GatsbyGenerator extends Command {
   static description = bold('Generate Gatsby Starters in Seconds 🎰')
@@ -69,8 +83,14 @@ class GatsbyGenerator extends Command {
       })
     }
 
-    // run!! ✨
-    selectStarter(starters)
+    // fetch and run!! ✨
+    const starters: any = fetchStarters()
+    starters.then((result: StartersType | any) => {
+      const parsedStarters: StartersType = JSON.parse(result).starters
+      selectStarter(parsedStarters)
+    }).catch((error: any) => {
+      this.log(error)
+    })
   }
 }
 
