@@ -24,10 +24,12 @@ class GatsbyGenerator extends Command {
     // grab starters and return them as choices for inquirer.js
     const buildChoices = (starters: StartersType) => {
       let choices: [string] | any = [] // strictNullChecks is not working! 😡
+
       starters.forEach(starter => {
         const choice = `${red.bold(starter.name + ':')} ${bold(starter.description)}`
         choices.push(choice)
       })
+
       return choices
     }
 
@@ -39,17 +41,29 @@ class GatsbyGenerator extends Command {
         message: 'Choose your Gatsby starter 🎰',
         choices: () => buildChoices(starters) // build choices from starters 🔨
       }]
+      const projectName = [{
+        type: 'input',
+        name: 'chosenName',
+        message: 'Enter your project name'
+      }]
 
       return prompt(choices).then((answer: any) => {
         const selectedStarter: string = answer.selectedStarter
 
         starters.forEach(starter => {
           const choiceOpt = `${red.bold(starter.name + ':')} ${bold(starter.description)}`
+
           if (choiceOpt === selectedStarter) {
-            this.log(bold(`\nDownloading ${starter.name}...\n`))
-            exec(`gatsby new my-awesome-starter ${starter.url}`)
-            this.log(bold('\nYour Gatsby Starter was downloaded successfully ✨'))
-            this.log(bold('Happy Gatsbying! 😄'))
+            return prompt(projectName).then((answers: any) => {
+              if (answers.chosenName.length > 0) {
+                this.log(bold(`\nDownloading ${starter.name} under ${answers.chosenName}...\n`))
+                exec(`gatsby new ${answers.chosenName} ${starter.url}`)
+                this.log(bold('\nYour Gatsby Starter was downloaded successfully ✨'))
+                this.log(bold('Happy Gatsbying! 😄'))
+              } else {
+                this.log(red.bold('\n🚨 Error! ') + bold('The project name should be at least 1 character long!'))
+              }
+            })
           }
         })
       })
