@@ -1,6 +1,7 @@
 import { Command, flags } from '@oclif/command'
 import { exec } from 'shelljs'
 import { prompt } from 'inquirer'
+import { red, bold } from 'chalk'
 
 import starters from './starters'
 
@@ -24,7 +25,7 @@ class GatsbyGenerator extends Command {
     const buildChoices = (starters: StartersType) => {
       let choices: [string] | any = [] // strictNullChecks is not working! 😡
       starters.forEach(starter => {
-        const choice = `${starter.name}: ${starter.description}`
+        const choice = `${red.bold(starter.name + ':')} ${bold(starter.description)}`
         choices.push(choice)
       })
       return choices
@@ -43,12 +44,12 @@ class GatsbyGenerator extends Command {
         const selectedStarter: string = answer.selectedStarter
 
         starters.forEach(starter => {
-          const choiceOpt = `${starter.name}: ${starter.description}`
+          const choiceOpt = `${red.bold(starter.name + ':')} ${bold(starter.description)}`
           if (choiceOpt === selectedStarter) {
-            this.log(`Downloading ${starter.name}...`)
+            this.log(bold(`\nDownloading ${starter.name}...\n`))
             exec(`gatsby new my-awesome-starter ${starter.url}`)
-            this.log('\nYour Gatsby Starter was downloaded successfully ✨')
-            this.log('Happy Gatsbying! 😄')
+            this.log(bold('\nYour Gatsby Starter was downloaded successfully ✨'))
+            this.log(bold('Happy Gatsbying! 😄'))
           }
         })
       })
