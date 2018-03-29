@@ -24,7 +24,7 @@ class GatsbyGenerator extends Command {
     const buildChoices = (starters: StartersType) => {
       let choices: [string] | any = [] // strictNullChecks is not working! 😡
       starters.forEach(starter => {
-        const choice = `${starter.name} - ${starter.description}`
+        const choice = `${starter.name}: ${starter.description}`
         choices.push(choice)
       })
       return choices
@@ -43,7 +43,7 @@ class GatsbyGenerator extends Command {
         const selectedStarter: string = answer.selectedStarter
 
         starters.forEach(starter => {
-          const choiceOpt = `${starter.name} - ${starter.description}`
+          const choiceOpt = `${starter.name}: ${starter.description}`
           if (choiceOpt === selectedStarter) {
             this.log(`Downloading ${starter.name}...`)
             exec(`gatsby new my-awesome-starter ${starter.url}`)

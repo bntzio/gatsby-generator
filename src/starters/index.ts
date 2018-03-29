@@ -1,23 +1,248 @@
 const starters: { name: string, description: string, url: string }[] = [
   {
-    name: 'Gatsby Starter Default',
+    name: 'gatsby-starter-default',
     description: 'The default Gatsby starter',
     url: 'https://github.com/gatsbyjs/gatsby-starter-default'
   },
   {
-    name: 'Gatsby Starter Hello World',
+    name: 'gatsby-starter-hello-world',
     description: 'Starter with the bare essentials needed for a Gatsby site',
     url: 'https://github.com/gatsbyjs/gatsby-starter-hello-world'
   },
   {
-    name: 'Gatsby Starter Blog',
+    name: 'gatsby-starter-blog',
     description: 'Gatsby starter for creating a blog',
     url: 'https://github.com/gatsbyjs/gatsby-starter-blog'
   },
   {
-    name: 'Superstylin',
-    description: 'A Gatsby Starter with Styled-Components',
+    name: 'gatsby-starter-superstylin',
+    description: 'A Gatsby starter with styled components',
     url: 'https://github.com/bntzio/gatsby-starter-superstylin'
+  },
+  {
+    name: 'gatsby-starter-alchemy',
+    description: 'A Gatsby starter with PostCSS powers',
+    url: 'https://github.com/bntzio/gatsby-starter-alchemy'
+  },
+  {
+    name: 'gatsby-starter-blog-no-styles',
+    description: 'Copy of gatsby-starter-blog sanitized of styling decisions',
+    url: 'https://github.com/noahg/gatsby-starter-blog-no-styles'
+  },
+  {
+    name: 'gatsby-material-starter',
+    description: 'A blog starter with Material design in mind for GatsbyJS',
+    url: 'https://github.com/Vagr9K/gatsby-material-starter'
+  },
+  {
+    name: 'gatsby-typescript-starter',
+    description: 'Gatsby 1.0 starter with typescript and many cools dev tools',
+    url: 'https://github.com/fabien0102/gatsby-starter'
+  },
+  {
+    name: 'gatsby-starter-bootstrap',
+    description: 'Gatsby starter for bootstrap a blog',
+    url: 'https://github.com/jaxx2104/gatsby-starter-bootstrap'
+  },
+  {
+    name: 'gatsby-blog-starter-kit',
+    description: 'A simple starter kit for a static blog created with Gatsby',
+    url: 'https://github.com/dschau/gatsby-blog-starter-kit'
+  },
+  {
+    name: 'gatsby-starter-casper',
+    description: 'The Casper theme v1.4 ported to Gatsby',
+    url: 'https://github.com/haysclark/gatsby-starter-casper'
+  },
+  {
+    name: 'gatsby-advanced-starter',
+    description: 'A skeleton starter for GatsbyJS that focuses on SEO/Social features/development environment',
+    url: 'https://github.com/Vagr9K/gatsby-advanced-starter'
+  },
+  {
+    name: 'glitch-gatsby-starter-blog',
+    description: 'gatsby-starter-blog on glitch.com',
+    url: 'https://github.com/100ideas/glitch-gatsby-starter-blog/'
+  },
+  {
+    name: 'gatsby-starter-grommet',
+    description: 'Gatsby starter with the Grommet design system',
+    url: 'https://github.com/alampros/gatsby-starter-grommet'
+  },
+  {
+    name: 'gatsby-starter-basic',
+    description: 'Gatsbyjs boilerplate',
+    url: 'https://github.com/PrototypeInteractive/gatsby-react-boilerplate'
+  },
+  {
+    name: 'gatsby-starter-typescript',
+    description: 'Typescript version of the default Gatsby starter',
+    url: 'https://github.com/haysclark/gatsby-starter-typescript'
+  },
+  {
+    name: 'gatsby-starter-default-i18n',
+    description: 'The default Gatsby i18n (Multilanguage) starter',
+    url: 'https://github.com/angeloocana/gatsby-starter-default-i18n'
+  },
+  {
+    name: 'gatsby-starter-contentful-i18n',
+    description: 'Gatsby with i18n content from Contentful starter repo',
+    url: 'https://github.com/mccrodp/gatsby-starter-contentful-i18n'
+  },
+  {
+    name: 'gatsby-starter-gatsbythemes',
+    description: 'Basic gatsby-starter package',
+    url: 'https://github.com/saschajullmann/gatsby-starter-gatsbythemes'
+  },
+  {
+    name: 'gatsby-starter-netlify-cms',
+    description: 'Example gatsby + netlify cms project',
+    url: 'https://github.com/AustinGreen/gatsby-starter-netlify-cms'
+  },
+  {
+    name: 'gatsby-starter-portfolio-emma',
+    description: 'A portfolio starter for Gatsby (White Theme, Grid Layout). The target audience are designers and photographers.',
+    url: 'https://github.com/LeKoArts/gatsby-starter-portfolio-emma'
+  },
+  {
+    name: 'gatsby-starter-portfolio-emilia',
+    description: 'A portfolio starter for Gatsby (Dark Theme, One-Page). The target audience are designers and photographers.',
+    url: 'https://github.com/LeKoArts/gatsby-starter-portfolio-emilia'
+  },
+  {
+    name: 'gatsby-starter-bootstrap-netlify',
+    description: 'Bootstrap and netlify CMS starter for Gatsby',
+    url: 'https://github.com/konsumer/gatsby-starter-bootstrap-netlify'
+  },
+  {
+    name: 'open-crowd-fund',
+    description: 'Your open source solution to crowd fund your ideas. Powered by Gatsby.js.',
+    url: 'https://github.com/rwieruch/open-crowd-fund'
+  },
+  {
+    name: 'gatsby-starter-dimension',
+    description: 'Gatsby.js starter template based on Dimension, designed by HTML5 UP.',
+    url: 'https://github.com/ChangoMan/gatsby-starter-dimension'
+  },
+  {
+    name: 'gatsby-starter-docs',
+    description: 'forked gatsby-advanced-starter made for documentation sites.',
+    url: 'https://github.com/ericwindmill/gatsby-starter-docs'
+  },
+  {
+    name: 'gatsby-starter-personal-blog',
+    description: 'A ready to use, easy to customize Gatsby starter. Some functions: markdown posts, pages and fragments, contact form, searching, filtering by category, pwa (100%), favicons generator, rss, sitemap, FB comments, social sharing ...',
+    url: 'https://github.com/greglobinski/gatsby-starter-personal-blog'
+  },
+  {
+    name: 'gatsby-starter-deck',
+    description: 'Create presentations using Gatsby, React & Markdown.',
+    url: 'https://github.com/fabe/gatsby-starter-deck'
+  },
+  {
+    name: 'gatsby-starter-forty',
+    description: 'Gatsby.js starter template based on Forty, designed by HTML5 UP.',
+    url: 'https://github.com/ChangoMan/gatsby-starter-forty'
+  },
+  {
+    name: 'gatsby-firebase-authentication',
+    description: 'Starter project for authentication with Firebase and plain React in Gatsby.js',
+    url: 'https://github.com/rwieruch/gatsby-firebase-authentication'
+  },
+  {
+    name: 'gatsby-starter-ceevee',
+    description: 'Gatsby Starter - CeeVee',
+    url: 'https://github.com/amandeepmittal/gatsby-starter-ceevee'
+  },
+  {
+    name: 'gatsby-starter-product-guy',
+    description: 'Gatsby Starter Theme',
+    url: 'https://github.com/amandeepmittal/gatsby-starter-product-guy'
+  },
+  {
+    name: 'gatsby-starter-strata',
+    description: 'Gatsby.js starter template based on Strata, designed by HTML5 UP.',
+    url: 'https://github.com/ChangoMan/gatsby-starter-strata'
+  },
+  {
+    name: 'verious',
+    description: 'No description',
+    url: 'https://github.com/cpinnix/verious-boilerplate'
+  },
+  {
+    name: 'gatsby-starter-lumen',
+    description: 'A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs',
+    url: 'https://github.com/alxshelepenok/gatsby-starter-lumen'
+  },
+  {
+    name: 'gatsby-starter-strict',
+    description: 'A Gatsby starter with a set of strict linting and auto-formatting rules',
+    url: 'https://github.com/kripod/gatsby-starter-strict'
+  },
+  {
+    name: 'gatsby-hampton-theme',
+    description: 'Minimalistic blog theme for Gatsby',
+    url: 'https://github.com/davad/gatsby-hampton-theme'
+  },
+  {
+    name: 'gatsby-wordpress-starter',
+    description: 'A GatsbyJS starter template that leverages the WordPress API, ACF and more',
+    url: 'https://github.com/ericwindmill/gatsby-starter-wordpress'
+  },
+  {
+    name: 'gatsby-starter-simple-landing',
+    description: 'A simple, ready to use landing page Gatsby starter.',
+    url: 'https://github.com/greglobinski/gatsby-starter-simple-landing'
+  },
+  {
+    name: 'gatsby-orga',
+    description: 'Gatsby starter website with org-mode',
+    url: 'https://github.com/xiaoxinghu/gatsby-orga'
+  },
+  {
+    name: 'gatsby-starter-minimal-blog',
+    description: 'Minimal blog focused on the content. Made with React and Gatsby.js',
+    url: 'https://github.com/LeKoArts/gatsby-starter-minimal-blog'
+  },
+  {
+    name: 'gatsby-starter-redux',
+    description: 'Simple and clean Startersite for Gatsby with Redux and Emotion',
+    url: 'https://github.com/caki0915/gatsby-starter-redux'
+  },
+  {
+    name: 'gatsby-contentful-starter',
+    description: 'Gatsby starter for a Contentful project.',
+    url: 'https://github.com/contentful-userland/gatsby-contentful-starter'
+  },
+  {
+    name: 'gatsby-starter-gcn',
+    description: 'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
+    url: 'https://github.com/ryanwiemer/gatsby-starter-gcn'
+  },
+  {
+    name: 'gatsby-portfolio-v3',
+    description: 'Gatsby Starter Timeline Theme',
+    url: 'https://github.com/amandeepmittal/gatsby-portfolio-v3'
+  },
+  {
+    name: 'gatsby-starter-stellar',
+    description: 'Gatsby.js starter template based on Stellar, designed by HTML5 UP.',
+    url: 'https://github.com/codebushi/gatsby-starter-stellar'
+  },
+  {
+    name: 'gatsby-starter-tailwind',
+    description: 'Gatsby starter styled with Tailwind',
+    url: 'https://github.com/taylorbryant/gatsby-starter-tailwind'
+  },
+  {
+    name: 'gatsby-starter-bloomer',
+    description: 'A Gatsby starter based on Bulma and Bloomer.',
+    url: 'https://github.com/Cethy/gatsby-starter-bloomer'
+  },
+  {
+    name: 'gatsby-starter-i18n-lingui',
+    description: 'Gatsby starter with i18n/l10n support using js-lingui.',
+    url: 'https://github.com/dcroitoru/gatsby-starter-i18n-lingui'
   }
 ]
 
