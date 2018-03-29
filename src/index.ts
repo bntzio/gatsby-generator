@@ -6,7 +6,7 @@ import { red, bold } from 'chalk'
 import starters from './starters'
 
 class GatsbyGenerator extends Command {
-  static description = 'Generate Gatsby Starters in Seconds 🎰'
+  static description = bold('Generate Gatsby Starters in Seconds 🎰')
 
   static examples = [
     `$ gatsby-generate`
