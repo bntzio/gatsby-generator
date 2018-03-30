@@ -1,12 +1,12 @@
-<p align="center" style="font-weight:bold;font-size:21px;">Gatsby Generator 🎰</p>
+# Gatsby Generator 🎰
 
-<p align="center" style="font-weight:bold;font-size:14px;">Generate Gatsby Starters in Seconds ✨</p>
+> Generate Gatsby Starters in Seconds ✨
 
 ### What's this?
 **Gatsby Generator** is well, a generator *(duh?)*
-and it provides a very simple way to view and download many Gatsby starters via a CLI 💻
+and it provides a very simple way to view and download many [Gatsby](https://github.com/gatsbyjs/gatsby) starters via a CLI 💻
 
-![Gatsby Generator CLI](/generator.gif)
+![Gatsby Generator CLI](/capture.gif)
 
 ### Requirements
 * node.js 8+
@@ -34,4 +34,4 @@ $ gatsby-generate --npx
 ### Enjoy 🍹
 I hope you find this project useful! 😄
 
-If you do, please give this project a star so other people can find it as well ⭐
+If you do, please give this project a star ⭐ so other people can find it as well 🙌
