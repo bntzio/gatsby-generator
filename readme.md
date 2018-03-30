@@ -35,3 +35,12 @@ $ gatsby-generate --npx
 I hope you find this project useful! 😄
 
 If you do, please give this project a star ⭐ so other people can find it as well 🙌
+
+### Contribute 😎
+If you want to contribute to **Gatsby Generator** you can do it by adding more Gatsby starters ✨
+
+Please add new starters at the end of **[this JSON file](https://github.com/bntzio/gatsby-generator/blob/master/src/api/starters.json)** with their `name`, `description` and `url`, then send a pull request!
+
+New features are also welcome, but first submit an issue with the `feature` label to discuss it.
+
+Thanks! 😃
