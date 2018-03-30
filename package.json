@@ -36,7 +36,19 @@
   ],
   "homepage": "https://github.com/bntzio/gatsby-generator",
   "keywords": [
-    "oclif"
+    "cli",
+    "cli-app",
+    "oclif",
+    "react",
+    "reactjs",
+    "gatsbyjs",
+    "gatsby",
+    "gatsby-starter",
+    "gatsby-theme",
+    "gatsby-generator",
+    "generator",
+    "static-site-generator",
+    "static-site"
   ],
   "license": "MIT",
   "main": "lib/index.js",
