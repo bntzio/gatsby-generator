@@ -23,15 +23,19 @@ class GatsbyGenerator extends Command {
   static description = bold('Generate Gatsby Starters in Seconds 🎰')
 
   static examples = [
-    `$ gatsby-generate`
+    `$ gatsby-generate`,
+    `$ gatsby-generate --npx`
   ]
 
   static flags = {
     version: flags.version({ char: 'v' }),
-    help: flags.help({ char: 'h' })
+    help: flags.help({ char: 'h' }),
+    npx: flags.boolean({ char: 'x', description: 'execute binary with npx' })
   }
 
   async run() {
+    const { flags } = this.parse(GatsbyGenerator)
+
     // types
     type StartersType = { name: string, description: string, url: string }[]
 
@@ -71,7 +75,11 @@ class GatsbyGenerator extends Command {
             return prompt(projectName).then((answers: any) => {
               if (answers.chosenName.length > 0) {
                 this.log(bold(`\nDownloading ${starter.name} under ${answers.chosenName}...\n`))
-                exec(`gatsby new ${answers.chosenName} ${starter.url}`)
+                if (flags.npx) {
+                  exec(`npx gatsby new ${answers.chosenName} ${starter.url}`)
+                } else {
+                  exec(`gatsby new ${answers.chosenName} ${starter.url}`)
+                }
                 this.log(bold('\nYour Gatsby Starter was downloaded successfully ✨'))
                 this.log(bold('Happy Gatsbying! 😄'))
               } else {
