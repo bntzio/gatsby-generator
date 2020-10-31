@@ -244,6 +244,11 @@
       "name": "gatsby-starter-i18n-lingui",
       "description": "Gatsby starter with i18n/l10n support using js-lingui.",
       "url": "https://github.com/dcroitoru/gatsby-starter-i18n-lingui"
+    },
+    {
+      "name": "gatsby-starter-photon",
+      "description": "Gatsby.js V2 starter based on the Photon site template, designed by HTML5 UP.",
+      "url": "https://github.com/codebushi/gatsby-starter-photon"
     }
   ]
 }
