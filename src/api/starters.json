@@ -244,6 +244,11 @@
       "name": "gatsby-starter-i18n-lingui",
       "description": "Gatsby starter with i18n/l10n support using js-lingui.",
       "url": "https://github.com/dcroitoru/gatsby-starter-i18n-lingui"
+    },
+    {
+      "name": "gatsby-starter-sass",
+      "description": "A Gatsby starter with Sass and no assumptions!",
+      "url": "https://github.com/colbyfayock/gatsby-starter-sass"
     }
   ]
 }
