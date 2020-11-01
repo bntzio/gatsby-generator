@@ -246,6 +246,11 @@
       "url": "https://github.com/dcroitoru/gatsby-starter-i18n-lingui"
     },
     {
+      "name": "gatsby-starter-leaflet",
+      "description": "Gatsby starter with Leafet to quickly build React apps with a map!",
+      "url": "https://github.com/colbyfayock/gatsby-starter-leaflet"
+    },
+    {
       "name": "gatsby-starter-photon",
       "description": "Gatsby.js V2 starter based on the Photon site template, designed by HTML5 UP.",
       "url": "https://github.com/codebushi/gatsby-starter-photon"
