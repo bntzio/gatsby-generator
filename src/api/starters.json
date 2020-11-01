@@ -246,6 +246,10 @@
       "url": "https://github.com/dcroitoru/gatsby-starter-i18n-lingui"
     },
     {
+      "name": "gatsby-starter-strata-codebushi",
+      "description": "Gatsby.js V2 starter based on the Strata site template, designed by HTML5 UP.",
+      "url": "https://github.com/codebushi/gatsby-starter-strata-codebushi"
+    }
       "name": "gatsby-starter-sass",
       "description": "A Gatsby starter with Sass and no assumptions!",
       "url": "https://github.com/colbyfayock/gatsby-starter-sass"
