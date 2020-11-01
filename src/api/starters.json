@@ -246,6 +246,10 @@
       "url": "https://github.com/dcroitoru/gatsby-starter-i18n-lingui"
     },
     {
+      "name": "gatsby-starter-sass",
+      "description": "A Gatsby starter with Sass and no assumptions!",
+      "url": "https://github.com/colbyfayock/gatsby-starter-sass"
+    }
       "name": "gatsby-starter-saas-marketing",
       "description": "A simple one page marketing site starter for SaaS companies and indie hackers",
       "url": "https://github.com/keegn/gatsby-starter-saas-marketing"
