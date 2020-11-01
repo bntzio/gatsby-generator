@@ -246,6 +246,10 @@
       "url": "https://github.com/dcroitoru/gatsby-starter-i18n-lingui"
     },
     {
+      "name": "gatsby-starter-saas-marketing",
+      "description": "A simple one page marketing site starter for SaaS companies and indie hackers",
+      "url": "https://github.com/keegn/gatsby-starter-saas-marketing"
+    }
       "name": "gatsby-starter-leaflet",
       "description": "Gatsby starter with Leafet to quickly build React apps with a map!",
       "url": "https://github.com/colbyfayock/gatsby-starter-leaflet"
